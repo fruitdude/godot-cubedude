@@ -10,6 +10,7 @@ func _on_GoalDetector_body_entered(body, goal_id):
 	get_tree().call_group("Actors", "freeze")
 	$Timer.start()
 	update_score(goal_id)
+	$GoalSound.play()
 
 
 func _on_Timer_timeout():
