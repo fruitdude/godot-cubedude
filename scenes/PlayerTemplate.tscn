@@ -270,6 +270,7 @@ tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 3.18323e-011, -3.63798e-012, 5.96046e-008, -7.27596e-012, -3.63798e-012, 1.48398e-009, 1, 1, 1, 1, 1.04167, 1, 3.18323e-011, -3.63798e-012, 5.96046e-008, -7.27596e-012, -3.63798e-012, 1.48398e-009, 1, 1, 1, 1 )
 
 [node name="PlayerTemplate" type="KinematicBody"]
+collision_mask = 7
 script = ExtResource( 1 )
 
 [node name="Armature" type="Spatial" parent="."]
