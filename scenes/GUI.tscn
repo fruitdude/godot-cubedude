@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://scenes/GUI_Theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/GFX/Interface/bannerHanging.png" type="Texture" id=3]
+[ext_resource path="res://assets/GFX/Interface/panel_woodPaperDetail.png" type="Texture" id=4]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -33,24 +34,76 @@ alignment = 1
 
 [node name="Player1Score" type="Label" parent="Banner/HBoxContainer"]
 margin_left = 205.0
-margin_top = 10.0
+margin_top = 5.0
 margin_right = 245.0
-margin_bottom = 70.0
+margin_bottom = 75.0
 text = "0"
 align = 2
 
 [node name="Title" type="Label" parent="Banner/HBoxContainer"]
 margin_left = 320.0
-margin_top = 10.0
+margin_top = 5.0
 margin_right = 640.0
-margin_bottom = 70.0
+margin_bottom = 75.0
 text = "Cubedude"
 align = 1
 valign = 1
 
 [node name="Player2Score" type="Label" parent="Banner/HBoxContainer"]
 margin_left = 715.0
-margin_top = 10.0
+margin_top = 5.0
 margin_right = 755.0
-margin_bottom = 70.0
+margin_bottom = 75.0
 text = "0"
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+theme = ExtResource( 2 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -100.0
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 200 )
+texture = ExtResource( 4 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Popup/NinePatchRect/VBoxContainer"]
+margin_top = 10.0
+margin_right = 460.0
+margin_bottom = 80.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Player 0 Wins"
+align = 1
+
+[node name="Button" type="Button" parent="Popup/NinePatchRect/VBoxContainer"]
+margin_top = 84.0
+margin_right = 460.0
+margin_bottom = 150.0
+text = "PLAY AGAIN"
+[connection signal="pressed" from="Popup/NinePatchRect/VBoxContainer/Button" to="." method="_on_Button_pressed"]
