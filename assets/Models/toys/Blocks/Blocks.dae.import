@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Blocks.dae-0647bac51f80aedb1412043ec1d707cb.scn"
+path="res://.import/Blocks.dae-9729a6ec0d6bb5ff995aa3dd401e9f74.scn"
 
 [deps]
 
-source_file="res://Models/toys/Blocks/Blocks.dae"
-dest_files=[ "res://.import/Blocks.dae-0647bac51f80aedb1412043ec1d707cb.scn" ]
+source_file="res://assets/Models/toys/Blocks/Blocks.dae"
+dest_files=[ "res://.import/Blocks.dae-9729a6ec0d6bb5ff995aa3dd401e9f74.scn" ]
 
 [params]
 

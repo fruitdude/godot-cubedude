@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Goal.dae-8d617b8f493216c0a8ebed80c9324f29.scn"
+path="res://.import/Goal.dae-f9714eb1971cc53e547ac8a992a9f958.scn"
 
 [deps]
 
-source_file="res://Models/Goal/Goal.dae"
-dest_files=[ "res://.import/Goal.dae-8d617b8f493216c0a8ebed80c9324f29.scn" ]
+source_file="res://assets/Models/Goal/Goal.dae"
+dest_files=[ "res://.import/Goal.dae-f9714eb1971cc53e547ac8a992a9f958.scn" ]
 
 [params]
 

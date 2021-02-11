@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/CubeDude.dae-fc76cca31a776229c22a54f3c0b04ec2.scn"
+path="res://.import/CubeDude.dae-2283e2049d943a2ddf96841f2632e1d8.scn"
 
 [deps]
 
-source_file="res://Models/Cubedude/CubeDude.dae"
-dest_files=[ "res://.import/CubeDude.dae-fc76cca31a776229c22a54f3c0b04ec2.scn" ]
+source_file="res://assets/Models/Cubedude/CubeDude.dae"
+dest_files=[ "res://.import/CubeDude.dae-2283e2049d943a2ddf96841f2632e1d8.scn" ]
 
 [params]
 

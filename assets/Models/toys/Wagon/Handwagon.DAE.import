@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Handwagon.DAE-fcf672d115c85a360552d365d8e9de1e.scn"
+path="res://.import/Handwagon.DAE-ccfeafbe76b2f4b49c94b4267a1ae670.scn"
 
 [deps]
 
-source_file="res://Models/toys/Wagon/Handwagon.DAE"
-dest_files=[ "res://.import/Handwagon.DAE-fcf672d115c85a360552d365d8e9de1e.scn" ]
+source_file="res://assets/Models/toys/Wagon/Handwagon.DAE"
+dest_files=[ "res://.import/Handwagon.DAE-ccfeafbe76b2f4b49c94b4267a1ae670.scn" ]
 
 [params]
 

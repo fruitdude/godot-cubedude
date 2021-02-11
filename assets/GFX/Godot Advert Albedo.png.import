@@ -2,18 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Godot Advert Albedo.png-2b56a0a9957a052c99e402c53b826943.stex"
+path="res://.import/Godot Advert Albedo.png-94b53a9b3a5f468443fb678b3002e886.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://GFX/Godot Advert Albedo.png"
-dest_files=[ "res://.import/Godot Advert Albedo.png-2b56a0a9957a052c99e402c53b826943.stex" ]
+source_file="res://assets/GFX/Godot Advert Albedo.png"
+dest_files=[ "res://.import/Godot Advert Albedo.png-94b53a9b3a5f468443fb678b3002e886.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -23,6 +27,7 @@ flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false

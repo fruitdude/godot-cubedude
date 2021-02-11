@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/bear.dae-08eb164e442eda5014191e8365960ea4.scn"
+path="res://.import/bear.dae-c5550e34bd2d6cc757fca086a8e79a05.scn"
 
 [deps]
 
-source_file="res://Models/toys/Bear/bear.dae"
-dest_files=[ "res://.import/bear.dae-08eb164e442eda5014191e8365960ea4.scn" ]
+source_file="res://assets/Models/toys/Bear/bear.dae"
+dest_files=[ "res://.import/bear.dae-c5550e34bd2d6cc757fca086a8e79a05.scn" ]
 
 [params]
 
