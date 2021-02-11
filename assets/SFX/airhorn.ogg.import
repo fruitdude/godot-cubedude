@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/airhorn.ogg-2393a89a811d1e477a75c59f427bccc6.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/airhorn.ogg"
+dest_files=[ "res://.import/airhorn.ogg-2393a89a811d1e477a75c59f427bccc6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
