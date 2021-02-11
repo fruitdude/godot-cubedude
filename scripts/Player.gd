@@ -1,21 +1,35 @@
 extends KinematicBody
 
 
-var motion:= Vector3()
-
-export var player_id:= 1
-
 const SPEED:= 10
 const UP:= Vector3(0, 1, 0)
 
+var _motion:= Vector3()
 
-func _physics_process(delta):
-	move()
+export var _player_id:= 1
+
+
+func _physics_process(_delta):
+	_move()
+	_animate()
+	_face_forward()
 	
 	
-func move():
-	var x = Input.get_action_strength("right_%s" % player_id) - Input.get_action_strength("left_%s" % player_id)
-	var z = Input.get_action_strength("down_%s" % player_id) - Input.get_action_strength("up_%s" % player_id)
+func _move():
+	var x = Input.get_action_strength("right_%s" % _player_id) - Input.get_action_strength("left_%s" % _player_id)
+	var z = Input.get_action_strength("down_%s" % _player_id) - Input.get_action_strength("up_%s" % _player_id)
 	
-	motion = Vector3(x, 0, z)
-	move_and_slide(motion.normalized() * SPEED, UP)
+	_motion = Vector3(x, 0, z)
+	move_and_slide(_motion.normalized() * SPEED, UP)
+	
+	
+func _animate():
+	if _motion.length() > 0:
+		$AnimationPlayer.play("Arms Cross Walk")
+	else:
+		$AnimationPlayer.stop()
+		
+		
+func _face_forward():
+	if not _motion.x == 0 or not _motion.z == 0:
+		look_at(Vector3(-_motion.x, 0, -_motion.z) * SPEED, UP)
