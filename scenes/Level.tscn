@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Pitch.tscn" type="PackedScene" id=2]
@@ -9,12 +9,29 @@
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/SFX/airhorn.ogg" type="AudioStream" id=8]
 [ext_resource path="res://assets/SFX/dominoespizzaakacatchme.ogg" type="AudioStream" id=9]
+[ext_resource path="res://scripts/DirectionalLight.gd" type="Script" id=10]
+[ext_resource path="res://scripts/SpotLight.gd" type="Script" id=11]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.396078, 0.227451, 1, 1 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 11, 5, 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
 
 [node name="Level" type="Spatial"]
 script = ExtResource( 1 )
@@ -55,6 +72,7 @@ collision_mask = 1
 _player_id = 2
 
 [node name="Goals" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Goal1" parent="Goals" instance=ExtResource( 6 )]
 editor/display_folded = true
@@ -156,6 +174,26 @@ stream = ExtResource( 8 )
 stream = ExtResource( 9 )
 volume_db = -20.0
 autoplay = true
+
+[node name="DirectionalLight" type="DirectionalLight" parent="." groups=[
+"Actors",
+]]
+editor/display_folded = true
+transform = Transform( 0.652376, -0.555915, 0.515135, 0, 0.679692, 0.733498, -0.757896, -0.478516, 0.443414, 0, 7.81161, 0 )
+shadow_enabled = true
+script = ExtResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DirectionalLight"]
+anims/fade = SubResource( 3 )
+
+[node name="SpotLight" type="SpotLight" parent="." groups=[
+"Actors",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 13 )
+light_energy = 5.0
+spot_range = 25.0
+spot_angle = 9.0
+script = ExtResource( 11 )
 [connection signal="body_entered" from="Goals/Goal1/GoalDetector" to="." method="_on_GoalDetector_body_entered" binds= [ 1 ]]
 [connection signal="body_entered" from="Goals/Goal2/GoalDetector" to="." method="_on_GoalDetector_body_entered" binds= [ 2 ]]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

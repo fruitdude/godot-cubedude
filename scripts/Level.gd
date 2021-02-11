@@ -7,7 +7,7 @@ var player2_score:= 0
 
 
 func _on_GoalDetector_body_entered(body, goal_id):
-	get_tree().call_group("Actors", "freeze")
+	get_tree().call_group("Actors", "freeze", goal_id)
 	$Timer.start()
 	update_score(goal_id)
 	$GoalSound.play()
